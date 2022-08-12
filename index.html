@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kobedigital html5 Responsive Template</title>
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="fonts/style.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		:root {
+		  --Pcolor: #EC1B30;
+		  --Hcolor: #cd0022;
+		  --Tcolor: #1A1A1A;
+		  --Bcolor: #727277;
+		  --white:  #ffffff;
+		  --black: #000000;
+		}
+		body {
+			 font-family: 'HelveticaNeue';
+			 font-size: 18px;
+			 line-height: 1.5;
+			 font-weight: 300;
+			 color: var(--Bcolor);
+		}
+		a {
+			text-decoration: none;
+		}
+		.container {
+			max-width: 1170px;
+			margin: 0 auto;
+			padding: 0 15px;
+		}
+		.row {
+			display: flex;
+			grid-gap: 30px;
+		}
+		.header-wrap {
+			justify-content: space-between;
+			align-items: center;
+		}
+		.header-area {
+			padding: 20px 0;
+			background: var(--Tcolor);
+		}
+		.phone-btn {
+			display: inline-flex;
+			align-items: center;
+			font-weight: 500;
+			color: var(--white);
+		}
+		.phone-btn img {
+			max-width: 20px;
+			margin-right: 10px;
+		}
+		.brand-logo {
+			display: inline-block;
+		}
+		.brand-logo img {
+			max-width: 180px;
+		}
+		.section {
+			padding: 105px 0;
+		}
+		.section-top {
+			padding-top: 105px;
+		}
+		.section-bottom {
+			padding-bottom: 105px;
+		}
+		.section-title {
+			margin-bottom: 40px;
+			text-align: center;
+		}
+		.section-title .title {
+			font-size: 44px;
+			font-weight: 700;
+			color: var(--Tcolor);
+			text-transform: capitalize;
+		}
+		.section-title .sub-title {
+			font-size: 20px;
+			margin-top: 5px;
+		}
+		.section-title .title span {
+			color: var(--Pcolor);
+		}
+		.section-title .title.text-white {
+			color: var(--white);
+		}
+		.text-center {
+			text-align: center;
+		}
+		.text-left {
+			text-align: left;
+		}
+		.text-right {
+			text-align: right;
+		}
+		.two-column {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 30px;
+		}
+		.three-column {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 30px;
+		}
+		.six-column {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-gap: 30px;
+		}
+		.single-card {
+			padding: 40px 35px;
+			background: var(--white);
+		    box-shadow: 0px 4px 20px rgb(0 0 0 / 10%);
+			transition: all .3s;
+		}
+		.single-card:hover {
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);
+		}
+		.single-card .icon {
+			margin-bottom: 20px;
+			max-width: 60px;
+		}
+		.single-card h3 {
+			margin-bottom: 15px;
+			font-size: 26px;
+			line-height: 1.4;
+			font-weight: 700;
+			text-transform: capitalize;
+			color: var(--Tcolor);
+		}
+		.single-card p {
+			margin-bottom: 0;
+			font-size: 18px;
+			color: var(--Bcolor);
+		}
+		.clients-list {
+			align-items: center;
+		}
+		.marketing-area {
+			background: var(--black);
+		}
+		.marketing-info ul li {
+			margin-bottom: 30px;
+			color: var(--white);
+			list-style-type: square;
+		}
+		.marketing-info ul li:last-child {
+			margin-bottom: 0;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.footer-area {
+			background: var(--Tcolor);
+		}
+		.footer-top {
+			padding: 60px 0;
+		}
+		.footer-bottom {
+			padding: 15px 0;
+			border-top: 1px solid #737373;
+		}
+		.footer-menu {
+			list-style: none;
+		}
+		.footer-menu li {
+			display: inline-block;
+			margin-right: 10px;
+		}
+		.footer-menu li:last-child {
+			margin-right: 0;
+		}
+		.footer-menu li a {
+			font-size: 16px;
+			font-weight: 500;
+			color: #737373;
+		}
+		.copyright-text p {
+			margin-bottom: 0;
+			font-size: 16px;
+			font-weight: 500;
+			color: #737373;
+		}
+		.hero-banner-area {
+			position: relative;
+			padding: 148px 0;
+			background-image: linear-gradient(to right, #F3F3F3 60% , #EC1B30 40%);
+			z-index: 1;
+		}
+		.banner-wrap {
+			align-items: center;
+		}
+		.banner-info h1 {
+			margin-bottom: 20px;
+			font-size: 48px;
+			line-height: 1.3;
+			font-weight: 700;
+			color: var(--Tcolor);
+		}
+		.banner-info h1 span {
+			color: var(--Pcolor);
+		}
+		.banner-info p {
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+		.primary-form {
+			padding: 30px;
+			background: var(--white);
+			box-shadow: 0px 4px 30px rgb(0 0 0 / 10%);
+			max-width: 486px;
+			margin-left: auto;
+		}
+		.primary-form .form-title {
+			margin-bottom: 20px;
+			font-size: 30px;
+			font-weight: 700;
+			text-transform: capitalize;
+			color: var(--Tcolor);
+		}
+		.primary-form .form-title span {
+			color: var(--Pcolor);
+		}
+		.primary-form .form-group {
+			margin-bottom: 10px;
+		}
+		.primary-form .form-control {
+			font-family: 'HelveticaNeue';
+			width: 100%;
+			border: 1px solid #EBEBEB;
+		    height: 50px;
+		    font-size: 18px;
+		    line-height: 18px;
+		    padding-left: 15px;
+		    padding-right: 15px;
+		    color: var(--black);
+		    border-radius: 0;
+		    font-weight: 500;
+		}
+		.primary-form .form-control:focus {
+			outline: none;
+		}
+		.primary-form .form-label {
+			margin-bottom: 5px;
+			font-size: 14px;
+			font-weight: 500;
+			color: var(--black);
+		}
+		.submit-btn {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 50px;
+			background: var(--Pcolor);
+			color: var(--white);
+			font-size: 20px;
+			font-weight: 700;
+			text-transform: capitalize;
+			border: none;
+			cursor: pointer;
+			transition: all .3s;
+		}
+		.submit-btn:hover {
+			background: var(--Hcolor);
+		}
+		.gvhq-image {
+			position: absolute;
+			width: 40%;
+			height: 85%;
+			right: 5%;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: -1;
+		}
+		.arrow-image {
+			position: absolute;
+			left: 56.6%;
+    		top: 13%;
+		}
+		.pattern-image {
+			position: absolute;
+			left: 40%;
+    		bottom: 24%;
+		}
+		.read-more-btn {
+			display: inline-block;
+			text-transform: capitalize;
+			font-size: 18px;
+			font-weight: 500;
+			color: var(--Bcolor);
+			transition: all .3s;
+		}
+		.read-more-btn:hover {
+			color: var(--Pcolor);
+		}
+		.accreditations-area  .accreditations-wrap {
+			align-items: center;
+		}
+		@media (max-width: 1450px) {
+			.arrow-image {
+				left: 56.4%;
+			}
+			.pattern-image {
+				left: 37%;
+			}
+		}
+		@media (max-width: 1199px) {
+			.container {
+				width: 960px;
+			}
+			.pattern-image {
+				left: 28%;
+				bottom: 18%;
+			}
+		}
+		@media (max-width: 991px) {
+			.container {
+				width: 720px;
+			}
+			.banner-info h1 {
+			    font-size: 32px;
+			}
+			.primary-form .form-title {
+			    font-size: 18px;
+			}
+			.primary-form .form-control {
+			    font-size: 16px;
+			}
+			.banner-info p {
+			    font-size: 16px;
+			}
+			.hero-banner-area {
+			    padding: 60px 0;
+			}
+			.section {
+				padding: 60px 0;
+			}
+			.section-bottom {
+				padding-bottom: 60px;
+			}
+			.section-top {
+				padding-top: 60px;
+			}
+			.section-title .title {
+				font-size: 32px;
+				line-height: 1.2;
+			}
+			.three-column {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			.accreditations-area .three-column {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			.recognition-area .three-column {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			.six-column {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			.single-card p {
+				font-size: 16px;
+			}
+			body {
+				font-size: 16px;
+			}
+			.arrow-image {
+				display: none;
+			}
+			.pattern-image {
+				display: none;
+			}
+			.gvhq-image {
+				display: none;
+			}
+			.read-more-btn {
+				font-size: 14px;
+			}
+			.banner-info p {
+				margin-bottom: 15px;
+			}
+			.marketing-info ul li {
+				margin-bottom: 20px;
+			}
+		}
+		@media (max-width: 767px) {
+			.container {
+				width: 540px;
+			}
+			.hero-banner-area {
+				background-image: linear-gradient(to bottom, #F3F3F3 60% , #EC1B30 40%);
+			}
+			.three-column {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			.two-column {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			.section-title .title br{
+				display: none;
+			}
+			.footer-bottom .text-left.copyright-text {
+				text-align: center;
+			}
+			.footer-bottom .text-right {
+				text-align: center;
+			}
+			.footer-bottom .two-column {
+				grid-gap: 10px;
+			}
+			.footer-top {
+				padding: 30px 0;
+				text-align: center;
+			}
+			.accreditations-area .three-column {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			.recognition-area .three-column {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			.section-title .title {
+				font-size: 30px;
+				line-height: 1.2;
+			}
+			.marketing-info ul li {
+				margin-bottom: 20px;
+			}
+		}
+		@media (max-width: 575px) {
+			.container {
+				width: 100%;
+			}
+			.brand-logo img {
+				max-width: 140px;
+			}
+			.phone-btn {
+				font-size: 14px;
+			}
+			.submit-btn {
+				font-size: 16px;
+			}
+			.single-card h3 {
+				font-size: 20px;
+			}
+			.marketing-info ul {
+				padding-left: 15px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header class="header-area">
+		<div class="container">
+			<div class="row header-wrap">
+				<a class="brand-logo" href="index.html"><img src="images/logo.png" alt="logo" /></a>
+				<a class="phone-btn" href="#">
+					<img src="images/phone.svg" alt="phone" /> 310-464-2676
+				</a>
+			</div>
+		</div>
+	</header>
+	<div class="hero-banner-area">
+		<div class="container">
+			<div class="two-column banner-wrap">
+				<div class="banner-info">
+					<h1>Best-In-Class <span>Digital Marketing</span> Services</h1>
+					<p>Kobe Digital is a leading digital marketing agency based in Los Angeles, California. We specialize in helping businesses deploy social media, search, and email campaigns that generate sales, leads and interest through our bespoke media solutions that are as effective as they are innovative.</p>
+					<a href="#" class="read-more-btn">read more</a>
+				</div>
+				<div class="banner-right">
+					<img class="gvhq-image" src="images/gvhq.png" alt="gvhq" />
+					<img class="arrow-image" src="images/arrow.png" alt="arrow.png" />
+					<img class="pattern-image" src="images/pattern.png" alt="pattern.png" />
+					<div class="primary-form">
+						<h2 class="form-title">Schedule A Free <span>Consultation</span></h2>
+						<form action="#">
+							<div class="form-group">
+								<input class="form-control" type="text" name="Name" id="Name" placeholder="Name" />
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="email" name="Email" id="Email" placeholder="Email" />
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="text" name="Phone_No" id="Phone_No" placeholder="Phone No." />
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="text" name="Company" id="Company" placeholder="Company" />
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="text" name="Job_Title" id="Job_Title" placeholder="Job Title" />
+							</div>
+							<div class="form-group">
+								<label for="what_i_need" class="form-label">What I need</label>
+								<select class="form-control"  name="what_i_need" id="what_i_need">
+								  <option value="Performance_Marketing">Performance Marketing</option>
+								  <option value="Web_evelopmentaab">Web Design & Development</option>
+								  <option value="Video_Production">Video Production</option>
+								</select>
+							</div>
+							<button type="submit" class="submit-btn">Submit Now</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="recognition-area section">
+		<div class="container">
+			<div class="section-title">
+				<h2 class="title">Recognition <span>and Awards</span></h2>
+			</div>
+			<div class="three-column">
+				<div class="text-center single-award">
+					<img src="images/awards-1.png" alt="awards" />
+				</div>
+				<div class="text-center single-award">
+					<img src="images/awards-2.png" alt="awards" />
+				</div>
+				<div class="text-center single-award">
+					<img src="images/awards-3.png" alt="awards" />
+				</div>
+				<div class="text-center single-award">
+					<img src="images/awards-4.png" alt="awards" />
+				</div>
+				<div class="text-center single-award">
+					<img src="images/awards-5.png" alt="awards" />
+				</div>
+				<div class="text-center single-award">
+					<img src="images/awards-6.png" alt="awards" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-area">
+		<div class="container">
+			<div class="section-title">
+				<h2 class="title">World-Class <span>Digital Marketing</span> Services</h2>
+				<p class="sub-title">Boost Your Brand Visibility Get More Targeted Leads</p>
+			</div>
+			<div class="three-column">
+				<div class="single-card">
+					<img class="icon" src="images/services-icon-1.png" alt="icon" />
+					<h3>Pay-Per-Click Advertising</h3>
+					<p>Get the best possible results with Kobe Digital's pay-per-click management services. PPC is a key part of our Los Angeles digital marketing services, executed by our team of certified PPC specialists. We launch and maintain full-scale campaigns across all major advertising platforms, analyzing the returned marketing data daily to tweak and optimize.</p>
+				</div>
+				<div class="single-card">
+					<img class="icon" src="images/services-icon-2.png" alt="icon" />
+					<h3>Web Design & Development</h3>
+					<p>Build your online home with Kobe Digital's web development team. Kobe Digital websites are the central hub of your online operations, acting as a powerful support for your digital marketing campaigns. Our premium website designs don't just look good: they embody your brand and are optimized for search engines.</p>
+				</div>
+				<div class="single-card">
+					<img class="icon" src="images/services-icon-3.png" alt="icon" />
+					<h3>Social Media Marketing</h3>
+					<p>Get social and join the big conversation online to build your influence, delivered by our digital marketing agency in by an engaging team of social media specialists. Our team creates fresh content for all the major social media platforms, building new audiences with a focus on converting fans into happy customers.</p>
+				</div>
+				<div class="single-card">
+					<img class="icon" src="images/services-icon-4.png" alt="icon" />
+					<h3>SEO</h3>
+					<p>Our results-oriented digital marketing services include a complete suite of proven SEO processes to drive organic yet highly targeted, qualified leads to your website through enhanced search engine rankings. We achieve this with comprehensive keyword research, extensive link-building strategies, and exhaustive site audits</p>
+				</div>
+				<div class="single-card">
+					<img class="icon" src="images/services-icon-5.png" alt="icon" />
+					<h3>Content Writing</h3>
+					<p>Kobe Digital's digital marketing services include powerful content marketing strategies – because if you don't have content, you won't enjoy success. Our team of experienced content writers and copywriters know how to engage audiences and establish credibility and authority through optimized, high-quality content.</p>
+				</div>
+				<div class="single-card">
+					<img class="icon" src="images/services-icon-6.png" alt="icon" />
+					<h3>Video Production</h3>
+					<p>Sometimes, a video ad is the best way to share your message. Kobe Digital's premium video production services deliver gorgeously web-optimized productions designed to engage, inspire, and convert targeted viewers into leads while building trust in your brand – all you need to do is click the upload button.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clients-area section">
+		<div class="container">
+			<div class="section-title">
+				<h2 class="title">Some of <span>Our Clients</span></h2>
+			</div>
+			<div class="six-column clients-list">
+				<div class="text-center">
+					<img src="images/clients-1.png" alt="clients" />
+				</div>
+				<div class="text-center">
+					<img src="images/clients-2.png" alt="clients" />
+				</div>
+				<div class="text-center">
+					<img src="images/clients-3.png" alt="clients" />
+				</div>
+				<div class="text-center">
+					<img src="images/clients-4.png" alt="clients" />
+				</div>
+				<div class="text-center">
+					<img src="images/clients-5.png" alt="clients" />
+				</div>
+				<div class="text-center">
+					<img src="images/clients-6.png" alt="clients" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="marketing-area section">
+		<div class="container">
+			<div class="section-title">
+				<h2 class="title text-white">Kobe Digital is a Top-Tier <span>Digital <br /> Marketing Company</span></h2>
+			</div>
+			<div class="two-column">
+				<div class="marketing-info">
+					<ul>
+						<li>Business is an intensely competitive affair. If you want to power ahead of your rivals, then an intelligent strategy is the key to your success. It all starts by partnering with a leading digital marketing agency that listens to your business goals and understands your brand, blending the two to create a ROI-boosting, results-driven campaign. However, finding a digital marketing agency in Los Angeles that can deliver all of this can be challenging, especially if you have limited resources and demand nothing less than success.</li>
+						<li>Since 2016, our expertise and passion for delivering measurable, results-driven campaigns has made Kobe Digital one of the most influential digital marketing agencies in Los Angeles. Our team pushes back the boundaries of the possible with innovative processes and strategies, taking marketing opportunities and transforming them into a campaign that hits your business goals.</li>
+						<li>Kobe Digital helps brands like yours to establish a consistent online brand identity, leading to more reach and visibility with your target market to drive business growth and revenues.</li>
+					</ul>
+				</div>
+				<div class="marketing-image">
+					<img src="images/marketing-image.png" alt="marketing" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="results-area section">
+		<div class="container">
+			<div class="section-title">
+				<h2 class="title">Campaigns that Deliver Powerful, <br /> Real-<span>World Results</span></h2>
+			</div>
+			<div class="two-column">
+				<div class="single-card">
+					<img class="icon" src="images/results-icon-1.png" alt="icon" />
+					<h3>You're a Partner</h3>
+					<p>Our clients are our partners; your success is ours, which means we value your needs equally to our own. Because we're driven to deliver nothing less than the best, our clients don't just keep returning – they also consistently and enthusiastically refer our digital marketing business to others. Perhaps that's even why you're here.</p>
+				</div>
+				<div class="single-card">
+					<img class="icon" src="images/results-icon-2.png" alt="icon" />
+					<h3>Driven By Results</h3>
+					<p>Results are more than a dry, jargon-filled report. At Kobe Digital, we make sure you understand how the solutions we apply get the results you want. More importantly, we analyze the marketing data from successful campaigns to show you fresh new opportunities for business growth.</p>
+				</div>
+				<div class="single-card">
+					<img class="icon" src="images/results-icon-3.png" alt="icon" />
+					<h3>World-Class Team</h3>
+					<p>Kobe Digital's success and reputation depend on maintaining an elite performance. Our expert digital marketing team goes above and beyond every day to deliver proactive, innovative campaigns that have been tailored to meet the unique demands of our clients.</p>
+				</div>
+				<div class="single-card">
+					<img class="icon" src="images/results-icon-4.png" alt="icon" />
+					<h3>Tested and Proven</h3>
+					<p>Kobe Digital has a proven track record when it comes to results for businesses. Since 2016, we've helped businesses of all shapes and sizes in a range of niches to rank better than their competition and boost their revenues with effective campaigns driven by strategic digital marketing solutions.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="accreditations-area section-bottom">
+		<div class="container">
+			<div class="section-title">
+				<h2 class="title">Accreditations</h2>
+			</div>
+			<div class="three-column accreditations-wrap">
+				<div class="text-center">
+					<img src="images/accreditations-1.png" alt="accreditations" />
+				</div>
+				<div class="text-center">
+					<img src="images/accreditations-2.png" alt="accreditations" />
+				</div>
+				<div class="text-center">
+					<img src="images/accreditations-3.png" alt="accreditations" />
+				</div>
+				<div class="text-center">
+					<img src="images/accreditations-4.png" alt="accreditations" />
+				</div>
+				<div class="text-center">
+					<img src="images/accreditations-5.png" alt="accreditations" />
+				</div>
+				<div class="text-center">
+					<img src="images/accreditations-6.png" alt="accreditations" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer-area">
+		<div class="container">
+			<div class="footer-top">
+				<a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+			</div>
+			<div class="footer-bottom">
+				<div class="two-column">
+					<div class="text-left copyright-text">
+						<p>Copyright &copy; 2022 Kobe Digital</p>
+					</div>
+					<div class="text-right">
+						<ul class="footer-menu">
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
